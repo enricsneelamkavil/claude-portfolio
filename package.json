@@ -1,0 +1,8 @@
+{
+  "name": "claude-portfolio",
+  "version": "1.0.0",
+  "description": "Product designer portfolio",
+  "scripts": {
+    "dev": "npx -y serve"
+  }
+}
