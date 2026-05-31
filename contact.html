@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Enric S Neelamkavil</title>
+  <meta name="description" content="Get in touch with Enric S Neelamkavil — product designer based in Bangalore. Taking on 2 projects for Q3 2026." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="agent.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <!-- Page intro -->
+  <section class="page-intro">
+    <div class="page-intro__inner">
+      <div>
+        <div class="crumb reveal">Contact · Reply in &lt; 24h, weekdays</div>
+        <h1 class="reveal" data-delay="1">Let's<br/><em>talk.</em></h1>
+      </div>
+      <div class="page-intro__lede reveal" data-delay="2">
+        I'm taking on <b>2 projects for Q3 2026</b> — freelance or short contract, with teams that care about the details. Tell me what you're building. The form's better than email; less ping-pong.
+      </div>
+    </div>
+  </section>
+
+  <!-- Main grid -->
+  <section class="section section--tight">
+    <div class="wrap contact-grid">
+
+      <!-- Form -->
+      <form class="contact-form reveal" data-delay="2" id="contactForm" novalidate>
+        <header class="contact-form__head">
+          <div class="eyebrow">Tell me a little</div>
+          <h2 class="display" style="font-size: clamp(36px, 4vw, 52px); margin: 8px 0 0;">Start an <em>enquiry.</em></h2>
+        </header>
+
+        <!-- Service type -->
+        <div class="cf-field">
+          <label>What are you here for?</label>
+          <div class="cf-chips" role="radiogroup" aria-label="Service type">
+            <label class="cf-chip">
+              <input type="radio" name="service" value="product" checked />
+              <span>Product design</span>
+            </label>
+            <label class="cf-chip">
+              <input type="radio" name="service" value="system" />
+              <span>Design system</span>
+            </label>
+            <label class="cf-chip">
+              <input type="radio" name="service" value="brand" />
+              <span>Brand &amp; site</span>
+            </label>
+            <label class="cf-chip">
+              <input type="radio" name="service" value="coaching" />
+              <span>Coaching · review</span>
+            </label>
+            <label class="cf-chip">
+              <input type="radio" name="service" value="other" />
+              <span>Something else</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Name + email -->
+        <div class="cf-grid">
+          <div class="cf-field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Jane Designer" required autocomplete="name" />
+          </div>
+          <div class="cf-field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@studio.com" required autocomplete="email" />
+          </div>
+        </div>
+
+        <div class="cf-grid">
+          <div class="cf-field">
+            <label for="company">Company / team</label>
+            <input id="company" name="company" type="text" placeholder="Studio · Startup · Self" autocomplete="organization" />
+          </div>
+          <div class="cf-field">
+            <label for="role">Your role</label>
+            <input id="role" name="role" type="text" placeholder="Founder · PM · Designer" />
+          </div>
+        </div>
+
+        <!-- Budget + timeline -->
+        <div class="cf-grid">
+          <div class="cf-field">
+            <label for="budget">Budget</label>
+            <select id="budget" name="budget">
+              <option>Under $5k</option>
+              <option>$5k — $15k</option>
+              <option selected>$15k — $40k</option>
+              <option>$40k — $100k</option>
+              <option>$100k+</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="cf-field">
+            <label for="timeline">When?</label>
+            <select id="timeline" name="timeline">
+              <option>ASAP</option>
+              <option selected>In 1–2 months</option>
+              <option>In 3+ months</option>
+              <option>Just exploring</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="cf-field">
+          <label for="brief">A little brief</label>
+          <textarea id="brief" name="brief" rows="6" placeholder="What are you building? Who is it for? What's keeping you up at night about it?"></textarea>
+          <div class="cf-help"><span id="briefCount">0</span> · words. Keep it loose — I'll ask follow-ups.</div>
+        </div>
+
+        <div class="cf-actions">
+          <button type="submit" class="btn btn--accent">
+            Send it
+            <span class="arrow"><svg viewBox="0 0 10 10" fill="none"><path d="M2 8L8 2M8 2H3M8 2V7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+          </button>
+          <span class="cf-meta">Reply in &lt; 24h on weekdays · I read everything</span>
+        </div>
+
+        <div class="cf-success" id="cfSuccess" hidden>
+          <div class="cf-success__icon">✓</div>
+          <h3>Thanks — message sent.</h3>
+          <p>I'll get back to you in under 24h on weekdays. In the meantime, there's a podcast you might like →</p>
+        </div>
+      </form>
+
+      <!-- Sidebar -->
+      <aside class="contact-side">
+
+        <!-- Direct contact -->
+        <section class="cs-card reveal" data-delay="3">
+          <div class="eyebrow">Or, the old way</div>
+          <h3>Reach out direct</h3>
+          <ul class="cs-list">
+            <li>
+              <span class="cs-list__k">Email</span>
+              <a class="cs-list__v" href="mailto:hello@enric.design">hello@enric.design</a>
+            </li>
+            <li>
+              <span class="cs-list__k">Phone</span>
+              <a class="cs-list__v" href="tel:+919999999999">+91 99999 99999</a>
+            </li>
+            <li>
+              <span class="cs-list__k">Calendly</span>
+              <a class="cs-list__v" href="#" rel="noopener">cal.com/enric ↗</a>
+            </li>
+            <li>
+              <span class="cs-list__k">Local time</span>
+              <span class="cs-list__v" id="localTime" aria-live="polite">— · Bangalore</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Services -->
+        <section class="cs-card cs-card--dark reveal" data-delay="4">
+          <div class="eyebrow" style="color: rgba(255,255,255,0.55);">Services</div>
+          <h3 style="color:#fff">What I take on</h3>
+          <ul class="cs-services">
+            <li>
+              <span class="num">01</span>
+              <b>Product design — end-to-end</b>
+              <span>From research and IA to high-fidelity, motion and handoff.</span>
+            </li>
+            <li>
+              <span class="num">02</span>
+              <b>Design systems</b>
+              <span>Foundations, components, tokens, docs and adoption support.</span>
+            </li>
+            <li>
+              <span class="num">03</span>
+              <b>Brand &amp; site</b>
+              <span>Identity systems and marketing-site builds in Framer or Webflow.</span>
+            </li>
+            <li>
+              <span class="num">04</span>
+              <b>Coaching · portfolio review</b>
+              <span>1:1 sessions for early designers. Paid and pro-bono spots.</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Socials -->
+        <section class="cs-card reveal" data-delay="5">
+          <div class="eyebrow">Elsewhere</div>
+          <h3>Find me on the internet</h3>
+          <div class="cs-socials">
+            <a class="cs-social" href="#" rel="noopener" aria-label="LinkedIn">
+              <span class="cs-social__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect x="2" y="9" width="4" height="12"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+              </span>
+              <span>LinkedIn</span>
+              <span class="cs-social__handle">/enric</span>
+            </a>
+            <a class="cs-social" href="#" rel="noopener" aria-label="Instagram">
+              <span class="cs-social__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="1"/>
+                </svg>
+              </span>
+              <span>Instagram</span>
+              <span class="cs-social__handle">@enric.design</span>
+            </a>
+            <a class="cs-social" href="#" rel="noopener" aria-label="X (Twitter)">
+              <span class="cs-social__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 5a8.5 8.5 0 0 1-2.5.7A4.3 4.3 0 0 0 21.4 3 8.5 8.5 0 0 1 18.8 4a4.3 4.3 0 0 0-7.3 3.9A12 12 0 0 1 3 4s-4 9 5 13a13 13 0 0 1-7 2c9 5 20 0 20-12a8 8 0 0 0 0-.5A6 6 0 0 0 22 5z"/>
+                </svg>
+              </span>
+              <span>X</span>
+              <span class="cs-social__handle">@enric</span>
+            </a>
+            <a class="cs-social" href="#" rel="noopener" aria-label="Dribbble">
+              <span class="cs-social__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M8.5 7.5c4 0 8 2 8 9"/>
+                  <path d="M6 12c4-1 9 0 12 6"/>
+                  <path d="M9 17c2-3 6-3 9 0"/>
+                </svg>
+              </span>
+              <span>Dribbble</span>
+              <span class="cs-social__handle">/enric</span>
+            </a>
+            <a class="cs-social" href="#" rel="noopener" aria-label="Read.cv">
+              <span class="cs-social__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 4h14v16H5z"/>
+                  <path d="M8 8h8M8 12h8M8 16h5"/>
+                </svg>
+              </span>
+              <span>Read.cv</span>
+              <span class="cs-social__handle">/enric</span>
+            </a>
+            <a class="cs-social" href="#" rel="noopener" aria-label="YouTube — Quiet Pixels">
+              <span class="cs-social__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 12s-3.5-7-10-7S2 12 2 12s3.5 7 10 7 10-7 10-7z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </span>
+              <span>YouTube</span>
+              <span class="cs-social__handle">Quiet Pixels</span>
+            </a>
+          </div>
+        </section>
+
+      </aside>
+    </div>
+  </section>
+
+  <!-- Outro band -->
+  <section class="section outro">
+    <div class="wrap outro__inner">
+      <div class="eyebrow">If forms aren't your thing</div>
+      <a href="mailto:hello@enric.design" class="outro__email">hello@enric.design</a>
+      <p class="subtle" style="max-width: 50ch; margin: 16px auto 0;">Or use the agent at the bottom of the page — it knows my work better than I do, and is awake at 3am.</p>
+    </div>
+  </section>
+
+  <script src="nav.js" data-page="contact"></script>
+  <script src="agent.js"></script>
+  <script>
+    (function () {
+      const form       = document.getElementById('contactForm');
+      const success    = document.getElementById('cfSuccess');
+      const brief      = document.getElementById('brief');
+      const briefCount = document.getElementById('briefCount');
+
+      // ---- Word counter ----
+      brief?.addEventListener('input', () => {
+        const words = brief.value.trim().split(/\s+/).filter(Boolean).length;
+        briefCount.textContent = words;
+      });
+
+      // ---- Validation helpers ----
+      function setError(input, msg) {
+        const field = input.closest('.cf-field');
+        field.classList.add('cf-field--error');
+        let errEl = field.querySelector('.cf-field__error');
+        if (!errEl) {
+          errEl = document.createElement('span');
+          errEl.className = 'cf-field__error';
+          errEl.setAttribute('role', 'alert');
+          field.appendChild(errEl);
+        }
+        errEl.textContent = msg;
+      }
+      function clearError(input) {
+        const field = input.closest('.cf-field');
+        field.classList.remove('cf-field--error');
+        field.querySelector('.cf-field__error')?.remove();
+      }
+
+      // Clear validation error as user types
+      ['name', 'email'].forEach(id => {
+        document.getElementById(id)?.addEventListener('input', function () {
+          clearError(this);
+        });
+      });
+
+      // ---- Form submit ----
+      form?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const nameEl  = document.getElementById('name');
+        const emailEl = document.getElementById('email');
+        let valid = true;
+
+        if (!nameEl.value.trim()) {
+          setError(nameEl, 'Please enter your name.');
+          valid = false;
+        } else {
+          clearError(nameEl);
+        }
+
+        const emailVal = emailEl.value.trim();
+        const emailOk  = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal);
+        if (!emailVal || !emailOk) {
+          setError(emailEl, 'Please enter a valid email address.');
+          valid = false;
+        } else {
+          clearError(emailEl);
+        }
+
+        if (!valid) {
+          // Scroll first error into view
+          form.querySelector('.cf-field--error input, .cf-field--error textarea')?.focus();
+          return;
+        }
+
+        // Hide form body, reveal success
+        form.querySelectorAll(
+          '.cf-field, .cf-grid, .cf-actions, .cf-chips, .contact-form__head'
+        ).forEach(el => { el.style.display = 'none'; });
+        success.hidden = false;
+      });
+
+      // ---- Live Bangalore clock (updates every minute) ----
+      const timeFmt = new Intl.DateTimeFormat('en-IN', {
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true,
+        timeZone: 'Asia/Kolkata',
+      });
+      function tick() {
+        const el = document.getElementById('localTime');
+        if (el) el.textContent = timeFmt.format(new Date()) + ' · Bangalore';
+      }
+      tick();
+      // Align to the next minute boundary so the display stays accurate
+      const msUntilNextMinute = (60 - new Date().getSeconds()) * 1000;
+      setTimeout(() => { tick(); setInterval(tick, 60000); }, msUntilNextMinute);
+    })();
+  </script>
+</body>
+</html>

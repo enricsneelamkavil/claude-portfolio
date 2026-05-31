@@ -1,0 +1,346 @@
+/* ==========================================================
+   Contact page styles
+   ========================================================== */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 32px;
+  align-items: start;
+  padding-top: 32px;
+}
+
+/* ---------- Form ---------- */
+.contact-form {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: clamp(24px, 3.5vw, 44px);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  position: sticky;
+  top: 96px;
+}
+.contact-form__head { margin-bottom: 4px; }
+.contact-form__head .display em { font-style: italic; color: var(--accent); }
+
+.cf-field { display: flex; flex-direction: column; gap: 8px; }
+.cf-field label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.cf-field input,
+.cf-field select,
+.cf-field textarea {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font: inherit;
+  color: var(--ink);
+  font-size: 15px;
+  outline: none;
+  transition: border-color .15s ease, background .15s ease;
+  appearance: none;
+}
+.cf-field select {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%236e6a63' stroke-width='1.4' fill='none' stroke-linecap='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+.cf-field input:focus,
+.cf-field select:focus,
+.cf-field textarea:focus {
+  border-color: var(--ink);
+  background: var(--paper);
+}
+.cf-field textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.55;
+  font-family: var(--font-body);
+}
+.cf-help {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+}
+
+.cf-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+@media (max-width: 600px) {
+  .cf-grid { grid-template-columns: 1fr; }
+}
+
+/* Service chips */
+.cf-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.cf-chip { cursor: pointer; }
+.cf-chip input { position: absolute; opacity: 0; pointer-events: none; }
+.cf-chip span {
+  display: inline-block;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  font-size: 13px;
+  transition: background .15s, border-color .15s, color .15s, transform .15s;
+}
+.cf-chip:hover span { border-color: var(--line-2); }
+.cf-chip input:checked + span {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+
+/* Actions */
+.cf-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+.cf-meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+/* Success state */
+.cf-success {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 24px 0;
+  animation: succ .5s cubic-bezier(.2,.7,.2,1) both;
+}
+@keyframes succ {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.cf-success__icon {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 24px;
+  display: grid; place-items: center;
+  margin-bottom: 8px;
+}
+.cf-success h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 400;
+}
+.cf-success p { margin: 0; color: var(--muted); }
+
+/* ---------- Sidebar ---------- */
+.contact-side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cs-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 26px;
+}
+.cs-card h3 {
+  margin: 6px 0 16px;
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.05;
+}
+.cs-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0; }
+.cs-list li {
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+}
+.cs-list li:last-child { border-bottom: 1px solid var(--line); }
+.cs-list__k {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.cs-list__v {
+  display: inline-block;
+  color: var(--ink);
+}
+a.cs-list__v { border-bottom: 1px solid transparent; transition: border-color .2s ease; }
+a.cs-list__v:hover { border-color: var(--ink); }
+
+/* Dark services card */
+.cs-card--dark {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+.cs-services { list-style: none; padding: 0; margin: 0; display: grid; gap: 0; }
+.cs-services li {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 12px 16px;
+  padding: 14px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.cs-services li:last-child { border-bottom: 1px solid rgba(255,255,255,0.08); }
+.cs-services .num {
+  grid-row: span 2;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.45);
+  padding-top: 4px;
+}
+.cs-services b {
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+}
+.cs-services span:not(.num) {
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  grid-column: 2 / 3;
+  line-height: 1.45;
+}
+
+/* Socials */
+.cs-socials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.cs-social {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  font-size: 13.5px;
+  transition: background .15s ease, border-color .15s ease;
+  background: var(--bg);
+}
+.cs-social:hover { background: var(--paper); border-color: var(--line-2); }
+.cs-social__icon {
+  width: 28px; height: 28px;
+  display: grid; place-items: center;
+  border-radius: 8px;
+  background: var(--ink);
+  color: var(--bg);
+}
+.cs-social__icon svg { width: 14px; height: 14px; }
+.cs-social__handle {
+  grid-column: 2 / 3;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .cs-socials { grid-template-columns: 1fr; }
+}
+
+/* ---------- Field error states ---------- */
+.cf-field--error input,
+.cf-field--error select,
+.cf-field--error textarea {
+  border-color: #e11d48;
+}
+.cf-field--error input:focus,
+.cf-field--error select:focus,
+.cf-field--error textarea:focus {
+  border-color: #e11d48;
+  background: var(--paper);
+}
+.cf-field__error {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.04em;
+  color: #e11d48;
+}
+
+/* FAQ */
+.cs-faq details {
+  border-top: 1px solid var(--line);
+  padding: 12px 0;
+}
+.cs-faq details:last-child { border-bottom: 1px solid var(--line); }
+.cs-faq summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+}
+.cs-faq summary::-webkit-details-marker { display: none; }
+.cs-faq summary::after {
+  content: "+";
+  font-family: var(--font-mono);
+  font-size: 18px;
+  color: var(--muted);
+  transition: transform .2s;
+}
+.cs-faq details[open] summary::after { content: "−"; }
+.cs-faq details p {
+  margin: 10px 0 4px;
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-form { position: static; }
+}
+
+/* ---------- Outro ---------- */
+.outro {
+  background: var(--bg-2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.outro__inner {
+  text-align: center;
+}
+.outro__email {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: clamp(40px, 8vw, 96px);
+  line-height: 1;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 12px;
+  margin-top: 14px;
+  transition: color .2s ease, border-color .2s ease;
+}
+.outro__email:hover { color: var(--accent); border-color: var(--accent); }

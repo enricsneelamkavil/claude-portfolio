@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lumen Case Study — Enric S Neelamkavil</title>
+  <meta name="description" content="Lumen case study — a focus-timer and journaling app built and shipped solo by Enric S Neelamkavil. 38k downloads, 4.8 stars." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="agent.css" />
+  <style>
+    .cs-hero {
+      padding: 96px var(--pad-x) 64px;
+      border-bottom: 1px solid var(--line);
+    }
+    .cs-hero__inner { max-width: var(--maxw); margin: 0 auto; }
+    .cs-back {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .cs-back:hover { color: var(--ink); }
+    .cs-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(80px, 14vw, 200px);
+      line-height: 0.9;
+      margin: 0;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+    }
+    .cs-hero h1 em { font-style: italic; color: var(--muted); }
+    .cs-hero__sub {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 2.4vw, 32px);
+      max-width: 38ch;
+      margin: 20px 0 36px;
+      color: var(--ink);
+      line-height: 1.25;
+    }
+    .cs-meta {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+    }
+    .cs-meta > div { display: flex; flex-direction: column; gap: 4px; }
+    .cs-meta dt {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .cs-meta dd { margin: 0; font-size: 14px; }
+    .cs-meta dd b { font-weight: 600; }
+
+    .cs-section { padding: 80px var(--pad-x); }
+    .cs-section__inner { max-width: var(--maxw); margin: 0 auto; }
+    .cs-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 4vw, 52px);
+      margin: 0 0 24px;
+      font-weight: 400;
+      max-width: 22ch;
+    }
+    .cs-section h2 em { font-style: italic; color: var(--muted); }
+    .cs-section p {
+      font-size: 16.5px;
+      max-width: 60ch;
+      line-height: 1.65;
+      color: var(--ink-2);
+      margin: 0 0 16px;
+    }
+
+    .cs-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 40px 0;
+    }
+    .cs-stat {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 24px;
+    }
+    .cs-stat b {
+      font-family: var(--font-display);
+      font-size: 56px;
+      line-height: 1;
+      color: var(--accent);
+      display: block;
+    }
+    .cs-stat span {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .cs-frame {
+      background: linear-gradient(180deg, #0c0c0c, #1c1814);
+      border-radius: 24px;
+      padding: 48px;
+      margin: 32px 0;
+      color: #fff;
+      min-height: 420px;
+      display: grid; place-items: center;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .cs-frame__label {
+      position: absolute;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .cs-quote {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 3.4vw, 44px);
+      line-height: 1.25;
+      max-width: 28ch;
+      margin: 40px 0;
+      padding-left: 24px;
+      border-left: 4px solid var(--accent);
+    }
+
+    .cs-next {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding: 60px var(--pad-x);
+      border-top: 1px solid var(--line);
+    }
+    .cs-next > a {
+      padding: 32px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--paper);
+      display: flex; flex-direction: column; gap: 8px;
+      transition: background .15s, transform .15s;
+    }
+    .cs-next > a:hover { background: var(--bg-2); transform: translateY(-2px); }
+    .cs-next .eyebrow { margin: 0; }
+    .cs-next h4 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      margin: 0;
+      font-weight: 400;
+    }
+    @media (max-width: 820px) {
+      .cs-meta, .cs-stats { grid-template-columns: 1fr 1fr; }
+      .cs-next { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="cs-hero">
+    <div class="cs-hero__inner">
+      <a class="cs-back" href="work.html">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        All work
+      </a>
+      <div class="eyebrow" style="margin-bottom: 18px;">Case study · 2024 — 2026 · Solo</div>
+      <h1>Lumen<em>.</em></h1>
+      <p class="cs-hero__sub">A focus timer and quiet journal for designers who want fewer, deeper days. Designed, built and shipped solo.</p>
+
+      <dl class="cs-meta">
+        <div><dt>Role</dt><dd><b>Founder · everything</b></dd></div>
+        <div><dt>Timeline</dt><dd>14 months · 2024 → 2026</dd></div>
+        <div><dt>Platforms</dt><dd>iOS · macOS</dd></div>
+        <div><dt>Stack</dt><dd>SwiftUI · Figma · Framer</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Context -->
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="eyebrow" style="margin-bottom: 14px;">01 · The reason</div>
+      <h2>Why <em>another</em> timer app?</h2>
+      <p>Most productivity tools are loud. Notifications, streaks, percentages, gamification — a software industrial complex of nudges. Lumen leans the other way: one session, one screen, one journal entry. Done.</p>
+      <p>I designed it for myself first. After a year of using it daily I realised other designers wanted the same thing, so I made it real.</p>
+
+      <div class="cs-stats">
+        <div class="cs-stat"><b>38k</b><span>Downloads</span></div>
+        <div class="cs-stat"><b>4.8★</b><span>1,240 reviews</span></div>
+        <div class="cs-stat"><b>14mo</b><span>Solo build</span></div>
+        <div class="cs-stat"><b>#2</b><span>Product Hunt</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual frame -->
+  <section class="cs-section" style="padding-top: 0;">
+    <div class="cs-section__inner">
+      <div class="cs-frame" style="position: relative;">
+        <span class="cs-frame__label" style="top: 24px; left: 28px;">Lumen · v 2.4 · main session screen</span>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; width: 100%; max-width: 760px; align-items: end;">
+          <div style="aspect-ratio: 9/19; background: linear-gradient(180deg, #1a1814, #0a0a0a); border: 1px solid rgba(255,255,255,0.08); border-radius: 22px; transform: rotate(-3deg);"></div>
+          <div style="aspect-ratio: 9/19; background: linear-gradient(180deg, #1a1814, #0a0a0a); border: 1px solid rgba(255,255,255,0.12); border-radius: 22px; transform: scale(1.1);"></div>
+          <div style="aspect-ratio: 9/19; background: linear-gradient(180deg, #1a1814, #0a0a0a); border: 1px solid rgba(255,255,255,0.08); border-radius: 22px; transform: rotate(3deg);"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approach -->
+  <section class="cs-section">
+    <div class="cs-section__inner">
+      <div class="eyebrow" style="margin-bottom: 14px;">02 · The approach</div>
+      <h2>Design what to <em>leave out.</em></h2>
+      <p>Every screen had a budget — three meaningful elements, max. If a fourth wanted in, something else had to leave. Most decisions were subtractive.</p>
+
+      <blockquote class="cs-quote">"The hardest part of designing Lumen was deciding what <em>not</em> to ship."</blockquote>
+
+      <p>The whole motion system runs on a single spring, retimed. No bouncy animations, no easter-egg confetti. The most exciting thing in the app is a 600ms cross-fade.</p>
+    </div>
+  </section>
+
+  <!-- Outcome -->
+  <section class="cs-section" style="background: var(--bg-2);">
+    <div class="cs-section__inner">
+      <div class="eyebrow" style="margin-bottom: 14px;">03 · The outcome</div>
+      <h2>It found <em>its people.</em></h2>
+      <p>Lumen launched in October 2024 and crossed 10k downloads in the first week, mostly through word-of-mouth in design communities. It's been featured by Sidebar, Mobbin and Designspells, and was Product Hunt's #2 product of the day. Most importantly: people keep using it after week 4.</p>
+    </div>
+  </section>
+
+  <!-- Next -->
+  <section class="cs-next">
+    <a href="work.html">
+      <div class="eyebrow">← Back</div>
+      <h4>All work</h4>
+    </a>
+    <a href="contact.html">
+      <div class="eyebrow">Next →</div>
+      <h4>Start a project</h4>
+    </a>
+  </section>
+
+  <script src="nav.js" data-page="work"></script>
+  <script src="agent.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enric · Old Portfolio · 2022</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=VT323&family=Courier+Prime&display=swap');
+
+    :root {
+      --crt: #c7f0c7;
+      --crt-dim: #5d8a5d;
+      --bg: #0a1a0a;
+      --line: rgba(199,240,199,0.18);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--crt);
+      font-family: 'Courier Prime', 'Courier New', monospace;
+      min-height: 100vh;
+      padding: 32px 24px 80px;
+      position: relative;
+      overflow-x: hidden;
+    }
+    /* CRT scanlines + flicker */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 100;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.0) 0,
+        rgba(0,0,0,0.0) 2px,
+        rgba(0,0,0,0.18) 3px,
+        rgba(0,0,0,0.18) 4px
+      );
+      mix-blend-mode: multiply;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 99;
+      background: radial-gradient(circle at 50% 50%, transparent 50%, rgba(0,0,0,0.5) 100%);
+      animation: flicker 4s infinite;
+    }
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50%      { opacity: 0.96; }
+      52%      { opacity: 0.85; }
+      54%      { opacity: 1; }
+    }
+
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid var(--line);
+      padding: 6px 12px;
+      font-size: 12px;
+      margin-bottom: 32px;
+      letter-spacing: 0.1em;
+    }
+    .top span { color: var(--crt-dim); }
+    .blink { animation: blink 1s steps(2, end) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    h1 {
+      font-family: 'VT323', monospace;
+      font-size: clamp(48px, 9vw, 96px);
+      margin: 0 0 6px;
+      letter-spacing: 0.04em;
+      text-shadow:
+        0 0 6px rgba(199,240,199,0.6),
+        0 0 14px rgba(199,240,199,0.35);
+    }
+    .subtitle {
+      font-family: 'VT323', monospace;
+      font-size: 22px;
+      color: var(--crt-dim);
+      margin-bottom: 32px;
+      letter-spacing: 0.06em;
+    }
+    .ascii {
+      font-family: 'VT323', monospace;
+      font-size: 18px;
+      line-height: 1;
+      color: var(--crt-dim);
+      white-space: pre;
+      margin: 24px 0;
+      text-shadow: 0 0 4px rgba(199,240,199,0.3);
+    }
+
+    .terminal {
+      border: 1px solid var(--line);
+      padding: 18px 18px 22px;
+      margin: 0 0 24px;
+    }
+    .terminal h2 {
+      font-family: 'VT323', monospace;
+      font-size: 24px;
+      margin: 0 0 12px;
+      color: var(--crt);
+      letter-spacing: 0.06em;
+    }
+    .terminal h2::before { content: "> "; color: var(--crt-dim); }
+
+    .links { list-style: none; padding: 0; margin: 0; }
+    .links li {
+      padding: 6px 0;
+      border-bottom: 1px dashed var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .links li:last-child { border-bottom: 0; }
+    .links a {
+      color: var(--crt);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .links a:hover {
+      background: var(--crt);
+      color: var(--bg);
+      padding: 0 4px;
+    }
+    .links .meta { color: var(--crt-dim); font-size: 13px; }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin: 16px 0 8px;
+    }
+    .gallery > div {
+      aspect-ratio: 4/3;
+      border: 1px solid var(--line);
+      position: relative;
+      display: grid;
+      place-items: center;
+      font-family: 'VT323', monospace;
+      font-size: 14px;
+      color: var(--crt-dim);
+      background:
+        repeating-linear-gradient(45deg, transparent 0 4px, rgba(199,240,199,0.06) 4px 5px);
+    }
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 40px;
+      padding: 10px 16px;
+      border: 1px solid var(--crt);
+      color: var(--crt);
+      background: transparent;
+      font-family: 'VT323', monospace;
+      font-size: 20px;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .2s, color .2s;
+    }
+    .back:hover {
+      background: var(--crt);
+      color: var(--bg);
+    }
+    .footer-note {
+      margin-top: 60px;
+      text-align: center;
+      color: var(--crt-dim);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+    }
+    .easter {
+      margin-top: 24px;
+      padding: 12px;
+      border: 1px dashed var(--crt-dim);
+      font-size: 13px;
+      color: var(--crt-dim);
+    }
+    .easter b { color: var(--crt); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="top">
+      <span>ENRIC.DESIGN [v1.0 · 2022]</span>
+      <span>$ uptime — 4y 2m</span>
+      <span class="blink">_</span>
+    </div>
+
+    <pre class="ascii"> _____ _   _ ____  ___ ____
+| ____| \ | |  _ \|_ _/ ___|
+|  _| |  \| | |_) || | |
+| |___| |\  |  _ < | | |___
+|_____|_| \_|_| \_\___\____|
+</pre>
+
+    <h1>hello world.</h1>
+    <div class="subtitle">// product designer · NID 2022 grad · b00ting up...</div>
+
+    <div class="terminal">
+      <h2>about</h2>
+      <p>just out of design school. obsessed with figma, swift, and making things that don't suck. currently looking for my first real product job.</p>
+      <p>this site was hand-coded in vs code at 2am. it shows.</p>
+    </div>
+
+    <div class="terminal">
+      <h2>projects/</h2>
+      <ul class="links">
+        <li><a>./tactile-ui-thesis.html</a><span class="meta">nid · 2022</span></li>
+        <li><a>./local-bakery-redesign.html</a><span class="meta">freelance · 2022</span></li>
+        <li><a>./weather-app-concept.html</a><span class="meta">side · 2021</span></li>
+        <li><a>./music-player-redux.html</a><span class="meta">side · 2021</span></li>
+      </ul>
+    </div>
+
+    <div class="terminal">
+      <h2>gallery</h2>
+      <div class="gallery">
+        <div>img_001.jpg</div>
+        <div>img_002.jpg</div>
+        <div>img_003.jpg</div>
+        <div>img_004.jpg</div>
+        <div>img_005.jpg</div>
+        <div>img_006.jpg</div>
+      </div>
+    </div>
+
+    <div class="terminal">
+      <h2>contact</h2>
+      <ul class="links">
+        <li><a>email →</a><span class="meta">enric.work@gmail.com</span></li>
+        <li><a>instagram →</a><span class="meta">@enric.draws</span></li>
+        <li><a>twitter →</a><span class="meta">@enric_codes</span></li>
+        <li><a>behance →</a><span class="meta">/enricns</span></li>
+      </ul>
+    </div>
+
+    <div class="easter">
+      <b>nice find.</b> this is what my site looked like fresh out of design school in 2022. it's terrible. i love it.
+      <br/><br/>
+      i kept it around to remember where i started — and that ugly + earnest beats polished + empty, every time.
+    </div>
+
+    <a href="index.html" class="back">
+      ← back to 2026
+    </a>
+
+    <div class="footer-note">© 2022 enric · made with love &amp; caffeine · ~end of file</div>
+  </div>
+</body>
+</html>
