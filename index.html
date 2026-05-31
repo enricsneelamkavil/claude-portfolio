@@ -64,7 +64,7 @@
                 <path d="M2 8L8 2M8 2H3M8 2V7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
               </svg></span>
           </a>
-          <a class="btn btn--ghost" href="about.html">Read about me</a>
+          <a class="btn btn--ghost" href="about-professional.html">Read about me</a>
         </div>
       </div>
 
@@ -447,7 +447,7 @@
           I shoot 35mm film, travel slowly, host a podcast called <b>Quiet Pixels</b>, and write monthly essays about
           design craft. Flip to the personal side on the About page — there's a whole other half.</p>
         <div style="margin-top: 28px;">
-          <a class="btn btn--dark" href="about.html?mode=personal">
+          <a class="btn btn--dark" href="about-personal.html">
             Meet the real me
             <span class="arrow"><svg viewBox="0 0 10 10" fill="none">
                 <path d="M2 8L8 2M8 2H3M8 2V7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
@@ -559,19 +559,7 @@
       }
     })();
 
-    // ---------- Clean URL updates for http/https ----------
-    (function () {
-      if (window.location.protocol !== 'file:') {
-        document.querySelectorAll('a[href^="about.html"]').forEach(link => {
-          const href = link.getAttribute('href');
-          if (href.includes('personal')) {
-            link.href = 'about-personal';
-          } else {
-            link.href = 'about-professional';
-          }
-        });
-      }
-    })();
+
   </script>
 </body>
 

@@ -277,6 +277,11 @@
         window.location.href = isLocal ? 'about-professional.html' : 'about-professional';
       });
       document.documentElement.style.setProperty('--accent', '#2563eb');
+      if (!isLocal) {
+        try {
+          window.history.replaceState(null, '', 'about-personal');
+        } catch (e) {}
+      }
     })();
   </script>
 </body>

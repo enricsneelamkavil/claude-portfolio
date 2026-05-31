@@ -4,10 +4,9 @@
   const self = document.currentScript;
   const page = (self && self.dataset.page) || '';
 
-  const isLocalFile = window.location.protocol === 'file:';
   const links = [
     { id: 'home',    href: 'index.html',   label: 'Home' },
-    { id: 'about',   href: isLocalFile ? 'about.html' : 'about-professional',   label: 'About' },
+    { id: 'about',   href: 'about-professional.html',   label: 'About' },
     { id: 'work',    href: 'work.html',    label: 'Work' },
     { id: 'resume',  href: 'resume.html',  label: 'Resume' },
     { id: 'contact', href: 'contact.html', label: 'Contact' },
@@ -54,7 +53,7 @@
             <h4>Pages</h4>
             <ul>
               <li><a href="index.html">Home</a></li>
-              <li><a href="${isLocalFile ? 'about.html' : 'about-professional'}">About</a></li>
+              <li><a href="about-professional.html">About</a></li>
               <li><a href="work.html">Work</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>

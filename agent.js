@@ -162,11 +162,10 @@ CONTACT
     }
     // About / personal
     if (/\b(about|who are you|yourself|personal|life|travel|photo|photograph|podcast|desk|hobby|hobbies|interest|film|climb)\b/.test(low)) {
-      const isLocal = window.location.protocol === 'file:';
       html += aboutTilesHtml();
       html += linkChipsHtml([
-        { label: 'Read about me', href: isLocal ? 'about.html' : 'about-professional' },
-        { label: 'The personal side', href: isLocal ? 'about.html?mode=personal' : 'about-personal' },
+        { label: 'Read about me', href: 'about-professional.html' },
+        { label: 'The personal side', href: 'about-personal.html' },
       ]);
       return html;
     }

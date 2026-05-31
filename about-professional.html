@@ -393,6 +393,11 @@
         window.location.href = isLocal ? 'about-personal.html' : 'about-personal';
       });
       document.documentElement.style.setProperty('--accent', '#ff4d2e');
+      if (!isLocal) {
+        try {
+          window.history.replaceState(null, '', 'about-professional');
+        } catch (e) {}
+      }
     })();
   </script>
 </body>
