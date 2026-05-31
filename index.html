@@ -558,6 +558,20 @@
         raf = null;
       }
     })();
+
+    // ---------- Clean URL updates for http/https ----------
+    (function () {
+      if (window.location.protocol !== 'file:') {
+        document.querySelectorAll('a[href^="about.html"]').forEach(link => {
+          const href = link.getAttribute('href');
+          if (href.includes('personal')) {
+            link.href = 'about-personal';
+          } else {
+            link.href = 'about-professional';
+          }
+        });
+      }
+    })();
   </script>
 </body>
 
