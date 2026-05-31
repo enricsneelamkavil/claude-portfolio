@@ -1,14 +1,283 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="refresh" content="0; url=about.html?mode=personal" />
-  <title>About (Personal) — Enric S Neelamkavil</title>
-  <script>
-    window.location.replace("about.html?mode=personal");
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Enric S Neelamkavil</title>
+  <meta name="description" content="About Enric S Neelamkavil — product designer based in Bangalore. Professional journey, tools, travel, and personal side." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="agent.css" />
+  <link rel="stylesheet" href="about.css" />
 </head>
-<body>
-  <p>Redirecting to the personal about page...</p>
+<body data-mode="personal">
+
+  <!-- Page intro -->
+  <section class="page-intro">
+    <div class="page-intro__inner">
+      <div>
+        <div class="crumb">About · Two sides of one designer</div>
+        <h1>About<br/><em>Enric.</em></h1>
+      </div>
+      <div class="page-intro__lede">
+        There's the version that runs design reviews, ships at standup, and lives inside Figma. And then there's the one that wakes up to make coffee with film loaded. Switch between them →
+
+        <!-- Pro / Personal toggle — inline segmented control -->
+        <div class="mode-seg" role="tablist" aria-label="View mode">
+          <button class="mode-seg__btn" role="tab" aria-selected="false" data-mode="pro" type="button">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7H4v13h16zM16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            Professional
+          </button>
+          <button class="mode-seg__btn" role="tab" aria-selected="true" data-mode="personal" type="button">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21l8.84-8.61a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            Personal
+          </button>
+          <span class="mode-seg__thumb" aria-hidden="true" style="transform: translateX(100%)"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== PERSONAL VIEW =================== -->
+  <main class="personal-view">
+
+    <!-- Hello card -->
+    <section class="section section--tight">
+      <div class="wrap pers-hello">
+        <div class="pers-hello__a">
+          <div class="eyebrow">Off the clock</div>
+          <h2 class="display" style="font-size: clamp(48px, 7vw, 88px); margin: 14px 0 16px;">
+            Hi, I'm <em>also</em> a person.
+          </h2>
+          <p style="font-size: 18px; max-width: 50ch;">
+            I shoot 35mm film, travel slowly, host a podcast called <b>Quiet Pixels</b>, climb on weekends, cook slow on Sundays, and write about design when I feel like it. Here's the rest of me.
+          </p>
+        </div>
+        <div class="pers-hello__b">
+          <div class="pers-stat"><b>19</b><span>Countries<br/>visited</span></div>
+          <div class="pers-stat"><b>412</b><span>Rolls of<br/>film shot</span></div>
+          <div class="pers-stat"><b>27</b><span>Podcast<br/>episodes</span></div>
+          <div class="pers-stat"><b>34</b><span>Essays<br/>on Medium</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Travel -->
+    <section class="section travel">
+      <div class="wrap">
+        <div class="section__head">
+          <div>
+            <div class="eyebrow">Travel · slowly, mostly</div>
+            <h2 class="section__title">Places I've <em>loved.</em></h2>
+          </div>
+          <a class="btn btn--accent" href="#travel-cta">
+            Travel with me
+            <span class="arrow"><svg viewBox="0 0 10 10" fill="none"><path d="M2 8L8 2M8 2H3M8 2V7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+          </a>
+        </div>
+
+        <div class="travel__feature">
+          <div class="travel__map placeholder placeholder--stripes" role="img" aria-label="World map placeholder">
+            <svg viewBox="0 0 800 360" class="travel__map-svg" aria-hidden="true">
+              <!-- dot grid pseudo-map -->
+              <g fill="rgba(12,12,12,0.18)">
+                <!-- random dots -->
+                <circle cx="120" cy="120" r="2"/><circle cx="140" cy="125" r="2"/><circle cx="160" cy="115" r="2"/>
+                <circle cx="180" cy="120" r="2"/><circle cx="200" cy="130" r="2"/><circle cx="220" cy="135" r="2"/>
+                <circle cx="240" cy="125" r="2"/><circle cx="260" cy="130" r="2"/><circle cx="280" cy="140" r="2"/>
+                <circle cx="320" cy="120" r="2"/><circle cx="340" cy="130" r="2"/><circle cx="360" cy="125" r="2"/>
+                <circle cx="380" cy="130" r="2"/><circle cx="400" cy="140" r="2"/><circle cx="420" cy="145" r="2"/>
+                <circle cx="440" cy="135" r="2"/><circle cx="460" cy="140" r="2"/><circle cx="480" cy="135" r="2"/>
+                <circle cx="500" cy="145" r="2"/><circle cx="520" cy="155" r="2"/><circle cx="540" cy="160" r="2"/>
+                <circle cx="560" cy="155" r="2"/><circle cx="580" cy="160" r="2"/><circle cx="600" cy="165" r="2"/>
+                <circle cx="620" cy="160" r="2"/><circle cx="640" cy="170" r="2"/><circle cx="660" cy="175" r="2"/>
+                <circle cx="140" cy="180" r="2"/><circle cx="160" cy="190" r="2"/><circle cx="180" cy="195" r="2"/>
+                <circle cx="220" cy="190" r="2"/><circle cx="240" cy="200" r="2"/><circle cx="260" cy="195" r="2"/>
+                <circle cx="280" cy="200" r="2"/><circle cx="300" cy="210" r="2"/><circle cx="320" cy="215" r="2"/>
+                <circle cx="380" cy="200" r="2"/><circle cx="400" cy="210" r="2"/><circle cx="420" cy="215" r="2"/>
+                <circle cx="440" cy="220" r="2"/><circle cx="460" cy="225" r="2"/><circle cx="500" cy="220" r="2"/>
+                <circle cx="540" cy="230" r="2"/><circle cx="580" cy="240" r="2"/><circle cx="620" cy="235" r="2"/>
+                <circle cx="640" cy="240" r="2"/><circle cx="680" cy="250" r="2"/><circle cx="200" cy="240" r="2"/>
+                <circle cx="220" cy="250" r="2"/><circle cx="240" cy="260" r="2"/><circle cx="260" cy="265" r="2"/>
+                <circle cx="280" cy="270" r="2"/><circle cx="380" cy="270" r="2"/><circle cx="400" cy="280" r="2"/>
+                <circle cx="420" cy="290" r="2"/><circle cx="440" cy="285" r="2"/><circle cx="460" cy="295" r="2"/>
+              </g>
+              <!-- Visited cities -->
+              <g class="travel__pin">
+                <circle cx="220" cy="135" r="6"/><text x="232" y="138">Reykjavík</text>
+              </g>
+              <g class="travel__pin">
+                <circle cx="380" cy="130" r="6"/><text x="392" y="133">Tbilisi</text>
+              </g>
+              <g class="travel__pin">
+                <circle cx="600" cy="160" r="6"/><text x="612" y="163">Kyoto</text>
+              </g>
+              <g class="travel__pin">
+                <circle cx="420" cy="220" r="6"/><text x="432" y="223">Bangalore</text>
+              </g>
+              <g class="travel__pin">
+                <circle cx="180" cy="190" r="6"/><text x="192" y="193">Lisbon</text>
+              </g>
+              <g class="travel__pin">
+                <circle cx="260" cy="265" r="6"/><text x="272" y="268">Cape Town</text>
+              </g>
+            </svg>
+            <div class="travel__map-stats">
+              <div><b>19</b><span>Countries</span></div>
+              <div><b>4</b><span>Continents</span></div>
+              <div><b>1</b><span>Trip a quarter, min.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="travel__strip">
+          <article class="travel__card placeholder placeholder--stripes">
+            <div class="travel__tag">Iceland · 2024</div>
+            <div class="travel__name">Cold light, hot springs</div>
+          </article>
+          <article class="travel__card placeholder">
+            <div class="travel__tag">Japan · 2023</div>
+            <div class="travel__name">Kyoto, slowly</div>
+          </article>
+          <article class="travel__card placeholder placeholder--stripes">
+            <div class="travel__tag">Georgia · 2024</div>
+            <div class="travel__name">Tbilisi balconies</div>
+          </article>
+          <article class="travel__card placeholder">
+            <div class="travel__tag">Portugal · 2022</div>
+            <div class="travel__name">Lisbon mornings</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Desk setup -->
+    <section class="section desk">
+      <div class="wrap">
+        <div class="section__head">
+          <div>
+            <div class="eyebrow">The desk</div>
+            <h2 class="section__title">Where the <em>work</em> happens.</h2>
+          </div>
+        </div>
+        <div class="desk__grid">
+          <figure class="desk__hero placeholder">
+            <span class="placeholder__label">Desk · Bangalore · late afternoon</span>
+          </figure>
+          <ul class="desk__list">
+            <li><b>M3 MacBook Pro 14"</b><span>Black, 32GB · daily driver</span></li>
+            <li><b>Apple Studio Display</b><span>Nano-texture · arm-mounted</span></li>
+            <li><b>HHKB Pro Hybrid Type-S</b><span>White · charcoal keycaps</span></li>
+            <li><b>Logitech MX Master 3S</b><span>Pale grey · matched to desk</span></li>
+            <li><b>Andrea Mosaic chair</b><span>Linen, oak, made in Tamil Nadu</span></li>
+            <li><b>Sony WH-1000XM5</b><span>Black · noise on, always</span></li>
+            <li><b>Hario V60</b><span>Mornings · single origin</span></li>
+            <li><b>Olympus mju II</b><span>Pocket film camera · 1997</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Podcast + Writing -->
+    <section class="section makes">
+      <div class="wrap makes__grid">
+        <article class="make make--pod">
+          <div class="make__head">
+            <div class="eyebrow">YouTube · since 2024</div>
+            <h3>Quiet Pixels</h3>
+          </div>
+          <p>Long, slow conversations with designers I admire. New episode roughly every three weeks. Currently on episode <b>27</b>.</p>
+          <div class="make__ep">
+            <div class="make__ep-thumb placeholder placeholder--stripes">
+              <span class="placeholder__label">Ep · 27 · "Slow software"</span>
+              <div class="make__play">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div>
+              <h4>Slow software with Linda Wei</h4>
+              <div class="subtle">1h 12m · 38k views</div>
+            </div>
+          </div>
+          <a class="btn btn--ghost" href="#">Watch on YouTube ↗</a>
+        </article>
+
+        <article class="make make--write">
+          <div class="make__head">
+            <div class="eyebrow">Medium · monthly</div>
+            <h3>Essays</h3>
+          </div>
+          <p>I write a little — mostly to slow my thinking down. 34 essays so far on craft, taste and the boring parts of design.</p>
+          <ul class="make__articles">
+            <li>
+              <b>The case for pause states</b>
+              <span>· 6 min read</span>
+            </li>
+            <li>
+              <b>What I learned shipping Lumen solo</b>
+              <span>· 12 min read</span>
+            </li>
+            <li>
+              <b>On calmness as a design principle</b>
+              <span>· 8 min read</span>
+            </li>
+            <li>
+              <b>The myth of the "obvious" interface</b>
+              <span>· 5 min read</span>
+            </li>
+          </ul>
+          <a class="btn btn--ghost" href="#">Read on Medium ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Interests strip -->
+    <section class="section section--tight interests">
+      <div class="wrap">
+        <div class="eyebrow" style="margin-bottom: 18px;">Other interests</div>
+        <div class="interests__strip">
+          <div class="i-chip"><span>📷</span>35mm film photography</div>
+          <div class="i-chip"><span>🪨</span>Bouldering, V3-ish</div>
+          <div class="i-chip"><span>🍜</span>Slow Sunday cooking</div>
+          <div class="i-chip"><span>💿</span>Vinyl, mostly jazz</div>
+          <div class="i-chip"><span>🌱</span>Bonsai (badly)</div>
+          <div class="i-chip"><span>📚</span>Independent bookstores</div>
+          <div class="i-chip"><span>🚲</span>Long, aimless rides</div>
+          <div class="i-chip"><span>🌒</span>Watching the moon</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Travel CTA -->
+    <section class="section">
+      <div class="wrap travel-cta" id="travel-cta">
+        <div>
+          <div class="eyebrow">An open invite</div>
+          <h2 class="display" style="font-size: clamp(40px, 6vw, 84px); margin: 14px 0 16px;">Travel with me <em>next.</em></h2>
+          <p style="max-width: 46ch;">A few times a year I open up a trip to friends and friends-of-friends. Slow itineraries, lots of walking, film cameras encouraged. Drop your email if you'd like to hear when the next one opens up.</p>
+        </div>
+        <form class="travel-cta__form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Thanks — added ✦';">
+          <label class="eyebrow" for="trav-email">Get on the list</label>
+          <div class="travel-cta__field">
+            <input id="trav-email" type="email" placeholder="you@somewhere.com" required />
+            <button type="submit" class="btn btn--accent">Join</button>
+          </div>
+          <div class="subtle" style="font-size: 12px;">One email per trip. No spam, ever.</div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="nav.js" data-page="about"></script>
+  <script src="agent.js"></script>
+  <script>
+    (function () {
+      const isLocal = window.location.protocol === 'file:';
+      document.querySelector('[data-mode="pro"]').addEventListener('click', () => {
+        window.location.href = isLocal ? 'about-professional.html' : 'about-professional';
+      });
+      document.documentElement.style.setProperty('--accent', '#2563eb');
+    })();
+  </script>
 </body>
 </html>

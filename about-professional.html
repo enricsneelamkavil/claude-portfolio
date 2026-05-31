@@ -1,14 +1,399 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="refresh" content="0; url=about.html?mode=pro" />
-  <title>About (Professional) — Enric S Neelamkavil</title>
-  <script>
-    window.location.replace("about.html?mode=pro");
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Enric S Neelamkavil</title>
+  <meta name="description" content="About Enric S Neelamkavil — product designer based in Bangalore. Professional journey, tools, travel, and personal side." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="agent.css" />
+  <link rel="stylesheet" href="about.css" />
 </head>
-<body>
-  <p>Redirecting to the professional about page...</p>
+<body data-mode="pro">
+
+  <!-- Page intro -->
+  <section class="page-intro">
+    <div class="page-intro__inner">
+      <div>
+        <div class="crumb">About · Two sides of one designer</div>
+        <h1>About<br/><em>Enric.</em></h1>
+      </div>
+      <div class="page-intro__lede">
+        There's the version that runs design reviews, ships at standup, and lives inside Figma. And then there's the one that wakes up to make coffee with film loaded. Switch between them →
+
+        <!-- Pro / Personal toggle — inline segmented control -->
+        <div class="mode-seg" role="tablist" aria-label="View mode">
+          <button class="mode-seg__btn" role="tab" aria-selected="true" data-mode="pro" type="button">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7H4v13h16zM16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            Professional
+          </button>
+          <button class="mode-seg__btn" role="tab" aria-selected="false" data-mode="personal" type="button">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21l8.84-8.61a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            Personal
+          </button>
+          <span class="mode-seg__thumb" aria-hidden="true" style="transform: translateX(0)"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== PROFESSIONAL VIEW =================== -->
+  <main class="pro-view">
+
+    <!-- Summary -->
+    <section class="section section--tight">
+      <div class="wrap summary">
+        <div class="summary__a">
+          <div class="eyebrow">A summary</div>
+          <p class="summary__lede">
+            <b>I design products that get out of the way.</b> 4+ years across fintech, SaaS and consumer apps — from the brief to the build. I care about clarity, calmness and the boring details no one notices when they're done right.
+          </p>
+        </div>
+        <div class="summary__b">
+          <dl class="summary__list">
+            <div><dt>Based</dt><dd>Bangalore, IN · UTC +5:30</dd></div>
+            <div><dt>Currently</dt><dd>Sr. Product Designer · <b>Method</b></dd></div>
+            <div><dt>Languages</dt><dd>English · Tamil · Hindi · a bit of Japanese</dd></div>
+            <div><dt>For hire</dt><dd>Freelance + contract · Q3 2026</dd></div>
+            <div><dt>Loves</dt><dd>Type, motion, slow software, pause states</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Journey -->
+    <section class="section journey">
+      <div class="wrap">
+        <div class="section__head">
+          <div>
+            <div class="eyebrow">A journey · 2018 → 2026</div>
+            <h2 class="section__title">How I got <em>here.</em></h2>
+          </div>
+        </div>
+        <ol class="timeline">
+          <li class="timeline__item">
+            <div class="timeline__yr">2026</div>
+            <div class="timeline__dot"></div>
+            <div class="timeline__body">
+              <h4>Sr. Product Designer · Method <span class="tag">Current</span></h4>
+              <p>Leading design for a Series B B2B SaaS platform. Owning the design system, AI features, and onboarding for ~12k teams.</p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__yr">2024</div>
+            <div class="timeline__dot"></div>
+            <div class="timeline__body">
+              <h4>Founder &amp; Designer · Lumen <span class="tag">Headline</span></h4>
+              <p>Built and shipped Lumen — a focus-timer + journaling app — solo. iOS + macOS. ~38k downloads. 14 months of nights and weekends.</p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__yr">2023</div>
+            <div class="timeline__dot"></div>
+            <div class="timeline__body">
+              <h4>Founding Designer · Sona</h4>
+              <p>Voice journaling app, seed-stage. Set up the design language, end-to-end product, motion vocabulary and brand.</p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__yr">2022</div>
+            <div class="timeline__dot"></div>
+            <div class="timeline__body">
+              <h4>Product Designer · Fennec Bank</h4>
+              <p>Reimagined the new-customer onboarding flow. 19% drop in abandonment, shipped to 4 markets in 8 months.</p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__yr">2022</div>
+            <div class="timeline__dot"></div>
+            <div class="timeline__body">
+              <h4>B.Des · NID Ahmedabad</h4>
+              <p>Bachelor's in Industrial Design. Graduated with distinction. Final-year project on tactile interfaces for low-vision users.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Companies / Worked with -->
+    <section class="section companies">
+      <div class="wrap">
+        <div class="section__head">
+          <div>
+            <div class="eyebrow">Worked with · 12 teams</div>
+            <h2 class="section__title">Teams that <em>trusted</em> the work.</h2>
+          </div>
+        </div>
+        <div class="companies__grid">
+
+          <div class="logo-card">
+            <svg viewBox="0 0 120 40" class="logo">
+              <circle cx="14" cy="20" r="10" fill="currentColor"/>
+              <circle cx="14" cy="20" r="4" fill="var(--paper)"/>
+              <text x="32" y="26" font-family="Instrument Serif" font-size="22" fill="currentColor" font-style="italic">Method</text>
+            </svg>
+          </div>
+
+          <div class="logo-card">
+            <svg viewBox="0 0 120 40" class="logo">
+              <path d="M8 12 L18 28 L28 12 Z" fill="currentColor"/>
+              <text x="34" y="26" font-family="Manrope" font-size="18" font-weight="700" fill="currentColor">FENNEC</text>
+            </svg>
+          </div>
+
+          <div class="logo-card">
+            <svg viewBox="0 0 120 40" class="logo">
+              <path d="M8 20 Q14 10 20 20 T32 20" fill="none" stroke="currentColor" stroke-width="2.5"/>
+              <text x="40" y="26" font-family="Instrument Serif" font-size="22" fill="currentColor">Sona</text>
+            </svg>
+          </div>
+
+          <div class="logo-card">
+            <svg viewBox="0 0 120 40" class="logo">
+              <rect x="8" y="10" width="20" height="20" rx="3" fill="currentColor"/>
+              <text x="34" y="26" font-family="Manrope" font-weight="600" font-size="18" fill="currentColor">almanac</text>
+            </svg>
+          </div>
+
+          <div class="logo-card">
+            <svg viewBox="0 0 120 40" class="logo">
+              <text x="8" y="28" font-family="Instrument Serif" font-style="italic" font-size="28" fill="currentColor">drift.</text>
+            </svg>
+          </div>
+
+          <div class="logo-card">
+            <svg viewBox="0 0 120 40" class="logo">
+              <circle cx="10" cy="14" r="5" fill="currentColor"/>
+              <circle cx="22" cy="20" r="5" fill="currentColor" opacity="0.6"/>
+              <circle cx="14" cy="28" r="5" fill="currentColor" opacity="0.3"/>
+              <text x="38" y="26" font-family="Manrope" font-weight="500" font-size="16" fill="currentColor">cohort.club</text>
+            </svg>
+          </div>
+
+          <div class="logo-card">
+            <svg viewBox="0 0 120 40" class="logo">
+              <rect x="8" y="12" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"/>
+              <rect x="14" y="18" width="16" height="16" fill="currentColor"/>
+              <text x="40" y="26" font-family="Manrope" font-weight="700" font-size="16" fill="currentColor">Tessera</text>
+            </svg>
+          </div>
+
+          <div class="logo-card">
+            <svg viewBox="0 0 120 40" class="logo">
+              <circle cx="14" cy="20" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
+              <circle cx="14" cy="20" r="2" fill="currentColor"/>
+              <text x="28" y="26" font-family="Manrope" font-weight="600" font-size="16" fill="currentColor">Halftime</text>
+            </svg>
+          </div>
+
+          <div class="logo-card">
+            <svg viewBox="0 0 120 40" class="logo">
+              <path d="M8 28 L14 12 L20 28 M11 22 L17 22" fill="none" stroke="currentColor" stroke-width="2"/>
+              <text x="28" y="26" font-family="Instrument Serif" font-size="20" fill="currentColor">Aurora Labs</text>
+            </svg>
+          </div>
+
+          <div class="logo-card">
+            <svg viewBox="0 0 120 40" class="logo">
+              <path d="M8 14 L14 26 L20 14 L26 26" fill="none" stroke="currentColor" stroke-width="2.5"/>
+              <text x="34" y="26" font-family="Manrope" font-weight="800" font-size="14" letter-spacing="1" fill="currentColor">NORTHWAVE</text>
+            </svg>
+          </div>
+
+          <div class="logo-card">
+            <svg viewBox="0 0 120 40" class="logo">
+              <rect x="8" y="10" width="20" height="20" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
+              <text x="34" y="26" font-family="Instrument Serif" font-style="italic" font-size="20" fill="currentColor">loop &amp; co</text>
+            </svg>
+          </div>
+
+          <div class="logo-card">
+            <svg viewBox="0 0 120 40" class="logo">
+              <path d="M14 8 L14 32 M8 14 L20 14 M8 26 L20 26" stroke="currentColor" stroke-width="2.5"/>
+              <text x="28" y="26" font-family="Manrope" font-weight="600" font-size="16" fill="currentColor">Salt &amp; Stone</text>
+            </svg>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools -->
+    <section class="section tools">
+      <div class="wrap">
+        <div class="section__head">
+          <div>
+            <div class="eyebrow">The kit</div>
+            <h2 class="section__title">Tools I <em>lean on.</em></h2>
+          </div>
+        </div>
+        <div class="tools-grid">
+
+          <div class="tool">
+            <div class="tool__logo" style="background:#1e1e1e">
+              <svg viewBox="0 0 38 57" width="22" height="22"><path fill="#0ACF83" d="M19 28.5h9.5a9.5 9.5 0 0 1 0 19 9.5 9.5 0 0 1-9.5-9.5z"/><path fill="#A259FF" d="M9.5 28.5a9.5 9.5 0 1 1 9.5 9.5h-9.5a9.5 9.5 0 0 1 0-19z" opacity="0"/><path fill="#F24E1E" d="M9.5 9.5h9.5v19H9.5a9.5 9.5 0 0 1 0-19z"/><path fill="#FF7262" d="M19 9.5h9.5a9.5 9.5 0 0 1 0 19H19z"/><path fill="#1ABCFE" d="M28.5 38a9.5 9.5 0 1 1-9.5-9.5h-.5V38z"/><path fill="#A259FF" d="M19 28.5H9.5a9.5 9.5 0 1 0 9.5 9.5z"/></svg>
+            </div>
+            <div class="tool__name">Figma</div>
+            <div class="tool__use">Daily · everything</div>
+          </div>
+
+          <div class="tool">
+            <div class="tool__logo" style="background:#0055ff">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M4 0h16v8h-8L4 16V0zm0 16l8-8h8v8h-8v8L4 16z"/></svg>
+            </div>
+            <div class="tool__name">Framer</div>
+            <div class="tool__use">Sites · prototypes</div>
+          </div>
+
+          <div class="tool">
+            <div class="tool__logo" style="background:#fff;border:1px solid var(--line)">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path fill="#4353FF" d="M3.5 19.5l8-15 3 5.5-6 11h-5zM12.5 19.5l4-7.5 4 7.5h-8z"/></svg>
+            </div>
+            <div class="tool__name">Webflow</div>
+            <div class="tool__use">Marketing sites</div>
+          </div>
+
+          <div class="tool">
+            <div class="tool__logo" style="background:#161616">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 4h16v3H4zM4 11h16v3H4zM4 18h10v3H4z" fill="#fff"/></svg>
+            </div>
+            <div class="tool__name">Notion</div>
+            <div class="tool__use">Docs · planning</div>
+          </div>
+
+          <div class="tool">
+            <div class="tool__logo" style="background:#5e6ad2">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M3 10l11 11M6 7l11 11M10 5l9 9M14 3l7 7"/></svg>
+            </div>
+            <div class="tool__name">Linear</div>
+            <div class="tool__use">Tickets · sprints</div>
+          </div>
+
+          <div class="tool">
+            <div class="tool__logo" style="background:#9999ff">
+              <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="10" fill="#1b006c"/><text x="12" y="17" text-anchor="middle" font-family="serif" font-style="italic" font-weight="bold" font-size="14" fill="#fff">Ae</text></svg>
+            </div>
+            <div class="tool__name">After Effects</div>
+            <div class="tool__use">Motion</div>
+          </div>
+
+          <div class="tool">
+            <div class="tool__logo" style="background:#fff;border:1px solid var(--line)">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#0c0c0c" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>
+            </div>
+            <div class="tool__name">Principle</div>
+            <div class="tool__use">Interaction prototypes</div>
+          </div>
+
+          <div class="tool">
+            <div class="tool__logo" style="background:#0c0c0c">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="#fff"><path d="M12 2l9 5v10l-9 5-9-5V7l9-5zm0 2.3L5 8v8l7 3.8L19 16V8l-7-3.7z"/></svg>
+            </div>
+            <div class="tool__name">Cursor</div>
+            <div class="tool__use">AI · code prototypes</div>
+          </div>
+
+          <div class="tool">
+            <div class="tool__logo" style="background:#4a154b">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M5 12a2 2 0 1 1 4 0v6a2 2 0 1 1-4 0v-6zm5 6a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm0-5a2 2 0 1 1 0 4h-1a2 2 0 1 1 0-4h1zm2-1a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm5-1a2 2 0 1 1 0-4h6a2 2 0 1 1 0 4h-6zm-1 2a2 2 0 1 1 4 0v6a2 2 0 1 1-4 0v-6z"/></svg>
+            </div>
+            <div class="tool__name">Slack</div>
+            <div class="tool__use">Comms</div>
+          </div>
+
+          <div class="tool">
+            <div class="tool__logo" style="background:#000">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="#fff"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="12" cy="12" r="5" fill="#000"/><circle cx="12" cy="12" r="3" fill="#fff"/></svg>
+            </div>
+            <div class="tool__name">Rive</div>
+            <div class="tool__use">Animation handoff</div>
+          </div>
+
+          <div class="tool">
+            <div class="tool__logo" style="background:#7c3aed">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M5.6 18.4l12.8-12.8" opacity="0.6"/></svg>
+            </div>
+            <div class="tool__name">Obsidian</div>
+            <div class="tool__use">Long-form notes</div>
+          </div>
+
+          <div class="tool">
+            <div class="tool__logo" style="background:#fff;border:1px solid var(--line)">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="#0c0c0c"><path d="M5 4h2v16H5zM9 4h2v16H9zM13 4h2v16h-2zM17 4h2v16h-2z" opacity="0.85"/></svg>
+            </div>
+            <div class="tool__name">iA Writer</div>
+            <div class="tool__use">Essays</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <div>
+            <div class="eyebrow">Achievements</div>
+            <h2 class="section__title">A little <em>shelf</em>.</h2>
+          </div>
+        </div>
+        <ul class="achv">
+          <li><span class="achv__yr">2025</span><b>Awwwards SOTD</b> · Lumen <span class="achv__tag">Award</span></li>
+          <li><span class="achv__yr">2025</span><b>Config 2025 speaker</b> · Lightning talk · "On Calm Interfaces" <span class="achv__tag">Talk</span></li>
+          <li><span class="achv__yr">2025</span><b>Sidebar weekly · Featured</b> · Lumen <span class="achv__tag">Press</span></li>
+          <li><span class="achv__yr">2024</span><b>Product Hunt #2 of the day</b> · Lumen <span class="achv__tag">Launch</span></li>
+          <li><span class="achv__yr">2024</span><b>CSS Design Awards · UI of the Day</b> · Sona <span class="achv__tag">Award</span></li>
+          <li><span class="achv__yr">2023</span><b>Awwwards SOTD</b> · Drift Studio <span class="achv__tag">Award</span></li>
+          <li><span class="achv__yr">2022</span><b>NID · Graduated with distinction</b> · Final-year project on tactile interfaces <span class="achv__tag">Education</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section education">
+      <div class="wrap">
+        <div class="education__grid">
+          <div>
+            <div class="eyebrow">Education</div>
+            <h2 class="display" style="font-size: clamp(40px, 5vw, 60px); margin: 14px 0 0;">Schools &amp; <em>shaping moments.</em></h2>
+          </div>
+          <div class="edu-cards">
+            <article class="edu-card">
+              <div class="edu-card__yr">2018 — 2022</div>
+              <h4>National Institute of Design · Ahmedabad</h4>
+              <div class="subtle">B.Des, Industrial Design · Graduated with distinction</div>
+              <p>Four years of foundation, sketching, model-making and one very long thesis on tactile interfaces. Where I learned to slow down and look longer.</p>
+            </article>
+            <article class="edu-card">
+              <div class="edu-card__yr">2023</div>
+              <h4>Interaction Design Foundation · Cert</h4>
+              <div class="subtle">UX research methods · Cognitive psychology · Design systems</div>
+              <p>Top-up courses I take in fits and starts. The certs are nice — the way it changed how I run research is nicer.</p>
+            </article>
+            <article class="edu-card">
+              <div class="edu-card__yr">Always</div>
+              <h4>Self-taught · Code &amp; Motion</h4>
+              <div class="subtle">Swift · React · After Effects · Rive</div>
+              <p>The other half of my education is shipping side-projects and rebuilding things from scratch until I understand them.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="nav.js" data-page="about"></script>
+  <script src="agent.js"></script>
+  <script>
+    (function () {
+      const isLocal = window.location.protocol === 'file:';
+      document.querySelector('[data-mode="personal"]').addEventListener('click', () => {
+        window.location.href = isLocal ? 'about-personal.html' : 'about-personal';
+      });
+      document.documentElement.style.setProperty('--accent', '#ff4d2e');
+    })();
+  </script>
 </body>
 </html>
