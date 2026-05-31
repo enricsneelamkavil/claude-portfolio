@@ -89,7 +89,7 @@ CONTACT
     { label: "what's your availability?", icon: 'calendar', q: 'What\'s your availability right now?' },
     { label: 'tell me about Lumen', icon: 'spark', q: 'Tell me about Lumen — the product you built solo.' },
     { label: 'wanna chat?', icon: 'arrow', href: 'contact.html' },
-    { label: 'resume', icon: 'arrow', href: 'about.html#resume' },
+    { label: 'resume', icon: 'arrow', href: 'resume.html' },
     { label: 'linkedin', icon: 'arrow', href: '#' },
   ];
 
@@ -165,7 +165,7 @@ CONTACT
       html += aboutTilesHtml();
       html += linkChipsHtml([
         { label: 'Read about me', href: 'about.html' },
-        { label: 'The personal side', href: 'about.html' },
+        { label: 'The personal side', href: 'about.html?mode=personal' },
       ]);
       return html;
     }

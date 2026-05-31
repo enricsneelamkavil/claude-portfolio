@@ -620,7 +620,7 @@
   <script src="nav.js" data-page="about"></script>
   <script src="agent.js"></script>
   <script>
-    // Mode toggle: inline segmented control
+    // Mode toggle: inline segmented control with history-based routing
     (function () {
       const buttons = document.querySelectorAll('.mode-seg__btn');
       const thumb = document.querySelector('.mode-seg__thumb');
@@ -628,7 +628,7 @@
       const proView = document.querySelector('.pro-view');
       const persView = document.querySelector('.personal-view');
 
-      function setMode(mode) {
+      function setMode(mode, updateUrl = true) {
         body.dataset.mode = mode;
         buttons.forEach(b => b.setAttribute('aria-selected', String(b.dataset.mode === mode)));
         if (thumb) thumb.style.transform = mode === 'pro' ? 'translateX(0)' : 'translateX(100%)';
@@ -641,9 +641,61 @@
           proView.hidden = true;
           persView.hidden = false;
         }
+
+        if (updateUrl) {
+          const newPathSegment = mode === 'pro' ? 'about-professional' : 'about-personal';
+          try {
+            const currentPath = window.location.pathname;
+            const dir = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
+            window.history.pushState(null, '', dir + newPathSegment);
+          } catch (e) {
+            console.warn("History API navigation failed, likely due to file:// protocol restriction:", e);
+          }
+        }
       }
-      buttons.forEach(b => b.addEventListener('click', () => setMode(b.dataset.mode)));
-      setMode('pro');
+
+      // Detect mode from URL (pathname, hash, or query parameter)
+      function getModeFromUrl() {
+        const path = window.location.pathname;
+        const hash = window.location.hash;
+        const search = window.location.search;
+
+        if (path.includes('about-personal') || hash.includes('personal') || search.includes('personal')) {
+          return 'personal';
+        }
+        if (path.includes('about-professional') || hash.includes('pro') || search.includes('pro')) {
+          return 'pro';
+        }
+        return 'pro'; // default
+      }
+
+      // Initialize mode on page load
+      const initialMode = getModeFromUrl();
+      setMode(initialMode, false);
+
+      // Align initial URL without adding to history stack
+      const initialSegment = initialMode === 'pro' ? 'about-professional' : 'about-personal';
+      try {
+        const currentPath = window.location.pathname;
+        const dir = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
+        window.history.replaceState(null, '', dir + initialSegment);
+      } catch (e) {
+        console.warn("History API replaceState failed:", e);
+      }
+
+      // Handle back/forward browser navigation
+      window.addEventListener('popstate', () => {
+        const currentMode = getModeFromUrl();
+        setMode(currentMode, false);
+      });
+
+      // Handle toggle button clicks
+      buttons.forEach(b => b.addEventListener('click', () => {
+        const nextMode = b.dataset.mode;
+        if (body.dataset.mode !== nextMode) {
+          setMode(nextMode, true);
+        }
+      }));
     })();
   </script>
 </body>
